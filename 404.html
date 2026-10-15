@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>Okan Halis — Coming soon</title>
 <meta name="description" content="Okan Halis, Senior UX / Product Designer in Berlin. Portfolio coming soon.">
 <style>
@@ -23,6 +24,12 @@
   .label { font-size: 15px; font-weight: 300; color: #636363; margin: 0 0 24px; }
   .statement { font-family: "Times New Roman", Times, serif; font-size: 29px; line-height: 1.1; margin: 0 0 40px; }
   .links { display: flex; flex-wrap: wrap; gap: 6px 24px; color: #636363; }
+  /* Dark mode: follows the visitor's system setting, in the same colours as the full site */
+  @media (prefers-color-scheme: dark) {
+    body { background: #161616; color: #c9c9c9; }
+    a:hover { color: #fff; }
+    .label, .links { color: #a3a3a3; }
+  }
   @media (max-width: 900px) {
     main { margin-left: 24px; width: calc(100vw - 48px); padding-top: 56px; }
     .statement { font-size: 25px; }
